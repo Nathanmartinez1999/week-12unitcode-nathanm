@@ -5,11 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vacation Giveaway</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" href="style.css">
 </head>
 
-<body>
 
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <img src="https://static.vecteezy.com/system/resources/previews/001/189/405/original/palm-tree-png.png"
+                alt="Logo" width="50" height="44" class="d-inline-block align-text-top">Beach Vaction Giveaway</a>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="font-size: x-large;">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://images.ctfassets.net/m868ks80jg7q/6ZXslbF4d6JDzjnAPyriyh/8387ea09160c40a98750f94ba77d8d2a/curacao-homepage-header-mobile3.jpg?w=1200&h=630&fm=jpg"
+                class="d-block w-100" alt="..." height="320px">
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.sandals.com/blog/content/images/2022/03/Sandals-Grande-Antigua-Long-Beach-Overview.jpg"
+                class="d-block w-100" alt="..." height="320px">
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.jetsetter.com//uploads/sites/7/2018/04/sjeL0BSe-1380x690.jpeg" class="d-block w-100"
+                alt="..." height="320px">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-5">Beach Vaction Giveaway</h1>
+        <p style="border: solid; color: red;">Want a chance to win a free dream beach vaction of a lifetime?? just enter
+            your
+            personal
+            information
+            below to be enterd to the drawling. *must be 21 or older to enter!</p>
+        <div class="mb-5">
+            <div class="row">
+                <div class="form-group col-sm-6 mb-4">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter-Name" />
+                </div>
+                <div class="form-group col-sm-6 mb-4">
+                    <label for="age">Age</label>
+                    <input type="text" name="age" class="form-control" id="age" placeholder="Enter-Age" />
+                </div>
+
+                <div class="form-group col-sm-6 mb-4">
+                    <label for="phone-number">phone-number</label>
+                    <input type="text" name="phone-number" class="form-control" id="phone-number"
+                        placeholder="Enter-Phone-Number" />
+                </div>
+
+                <div class="form-group col-sm-6 mb-4">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter-Email" />
+                </div>
+            </div>
+            <div class="col-1g-12 mt-5">
+                <button class="btn btn-success" id="submit" onclick="AddData()">
+                    Add Entry
+                </button>
+                <button class="btn btn-primary" id="update">Update</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row mt-5">
+        <div class="col-12">
+            <table class="table table-borderd" id="crudTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>phone-number</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

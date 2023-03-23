@@ -34,8 +34,7 @@ function showData() {
     var peopleList;
     if (localStorage.getItem("peopleList") == null) {
         peopleList = [];
-    }
-    else {
+    } else {
         peopleList = JSON.parse(localStorage.getItem("peopleList"));
     }
     var html = "";
@@ -103,3 +102,44 @@ function deleteData(index) {
         (peopleList));
     showData();
 }
+
+function updateData(index) {
+    var peopleList;
+    if (localStorage.getItem("peopleList") == null) {
+        peopleList = [];
+    } else {
+        peopleList = JSON.parse(localStorage.getItem
+            ("peopleList"));
+    }
+
+    document.getElementById("name").value = peopleList[index].name;
+    document.getElementById("age").value = peopleList[index].age;
+    document.getElementById("phone-number").value = peopleList[index].phoneNumber;
+    document.getElementById("email").value = peopleList[index].email;
+
+
+    Document.querySelector("Update").onclick = function () {
+        if (validateForm() == true)
+            peopleList[index].name = document.getElementById("name").value;
+        peopleList[index].age = document.getElementById("age").value;
+        peopleList[index].phoneNumber = document.getElementById("phone-number").value;
+        peopleList[index].email = document.getElementById("email").value;
+
+        localStorage.setItem("peopleList", JSON.stringify(peopleList));
+
+        showData();
+    }
+
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("phone-number").value = "";
+    document.getElementById("email").value = "";
+
+}
+
+
+
+
+
+
+
